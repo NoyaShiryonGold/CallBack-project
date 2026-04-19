@@ -1,4 +1,4 @@
-Multi-Platform Hybrid Chat System (WCF & SignalR)
+**Multi-Platform Hybrid Chat System (WCF & SignalR)**
 🚀 Overview
 This project is a high-performance, real-time communication system designed to bridge the gap between traditional desktop environments and modern mobile platforms. It demonstrates a sophisticated architectural solution for supporting Real-time Duplex communication across diverse ecosystems.
 
