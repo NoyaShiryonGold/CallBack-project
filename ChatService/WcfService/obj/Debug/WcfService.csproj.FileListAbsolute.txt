@@ -1,0 +1,13 @@
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\MyChatDatabase.mdf
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\MyChatDatabase_log.ldf
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\WcfService.dll
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\WcfService.pdb
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\Model.dll
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\ViewModel.dll
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\Model.pdb
+C:\Users\gold\Desktop\ChatService\WcfService\bin\Debug\ViewModel.pdb
+C:\Users\gold\Desktop\ChatService\WcfService\obj\Debug\WcfService.csproj.AssemblyReference.cache
+C:\Users\gold\Desktop\ChatService\WcfService\obj\Debug\WcfService.csproj.CoreCompileInputs.cache
+C:\Users\gold\Desktop\ChatService\WcfService\obj\Debug\WcfService.csproj.Up2Date
+C:\Users\gold\Desktop\ChatService\WcfService\obj\Debug\WcfService.dll
+C:\Users\gold\Desktop\ChatService\WcfService\obj\Debug\WcfService.pdb

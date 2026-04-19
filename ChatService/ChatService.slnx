@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Model/Model.csproj" Id="7c24d541-ecba-4b70-9a72-7a861e0111ae" />
+  <Project Path="ViewModel/ViewModel.csproj" Id="ac30200a-7a3d-4e02-87ba-8f9c562bec3d" />
+  <Project Path="WcfService/WcfService.csproj" Id="6e215564-1fcd-44a0-8778-7a1397d21666" />
+  <Project Path="WpfHost/WpfHost.csproj" Id="44217324-2d60-47cc-8e9b-da1ff1ffb57f" />
+</Solution>

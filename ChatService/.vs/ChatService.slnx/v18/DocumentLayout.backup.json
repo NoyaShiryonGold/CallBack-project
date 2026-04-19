@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44217324-2D60-47CC-8E9B-DA1FF1FFB57F}|WpfHost\\WpfHost.csproj|c:\\users\\noya\\documents\\github\\callback project\\chatservice\\wpfhost\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{44217324-2D60-47CC-8E9B-DA1FF1FFB57F}|WpfHost\\WpfHost.csproj|solutionrelative:wpfhost\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|c:\\users\\noya\\documents\\github\\callback project\\chatservice\\wcfservice\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|solutionrelative:wcfservice\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|c:\\users\\noya\\documents\\github\\callback project\\chatservice\\wcfservice\\imauichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|solutionrelative:wcfservice\\imauichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|c:\\users\\noya\\documents\\github\\callback project\\chatservice\\wcfservice\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|solutionrelative:wcfservice\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44217324-2D60-47CC-8E9B-DA1FF1FFB57F}|WpfHost\\WpfHost.csproj|C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\wpfhost\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44217324-2D60-47CC-8E9B-DA1FF1FFB57F}|WpfHost\\WpfHost.csproj|solutionrelative:wpfhost\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|c:\\users\\noya\\documents\\github\\callback project\\chatservice\\wcfservice\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E215564-1FCD-44A0-8778-7A1397D21666}|WcfService\\WcfService.csproj|solutionrelative:wcfservice\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IChatService.cs",
+              "DocumentMoniker": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\IChatService.cs",
+              "RelativeDocumentMoniker": "WcfService\\IChatService.cs",
+              "ToolTip": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\IChatService.cs",
+              "RelativeToolTip": "WcfService\\IChatService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:33:40.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IMauiChatService.cs",
+              "DocumentMoniker": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\IMauiChatService.cs",
+              "RelativeDocumentMoniker": "WcfService\\IMauiChatService.cs",
+              "ToolTip": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\IMauiChatService.cs",
+              "RelativeToolTip": "WcfService\\IMauiChatService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:32:57.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\ChatHub.cs",
+              "RelativeDocumentMoniker": "WcfService\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\ChatHub.cs",
+              "RelativeToolTip": "WcfService\\ChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:18:50.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\ChatService.cs",
+              "RelativeDocumentMoniker": "WcfService\\ChatService.cs",
+              "ToolTip": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WcfService\\ChatService.cs",
+              "RelativeToolTip": "WcfService\\ChatService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:04:49.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WpfHost\\App.config",
+              "RelativeDocumentMoniker": "WpfHost\\App.config",
+              "ToolTip": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WpfHost\\App.config",
+              "RelativeToolTip": "WpfHost\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-19T16:02:34.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WpfHost\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfHost\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Noya\\Documents\\GitHub\\CallBack project\\ChatService\\WpfHost\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfHost\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T12:20:02.673Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

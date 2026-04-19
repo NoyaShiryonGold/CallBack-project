@@ -1,0 +1,11 @@
+C:\Users\gold\Desktop\ChatService\ViewModel\bin\Debug\MyChatDatabase.mdf
+C:\Users\gold\Desktop\ChatService\ViewModel\bin\Debug\MyChatDatabase_log.ldf
+C:\Users\gold\Desktop\ChatService\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\gold\Desktop\ChatService\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\gold\Desktop\ChatService\ViewModel\bin\Debug\Model.dll
+C:\Users\gold\Desktop\ChatService\ViewModel\bin\Debug\Model.pdb
+C:\Users\gold\Desktop\ChatService\ViewModel\obj\Debug\ViewModel.csproj.AssemblyReference.cache
+C:\Users\gold\Desktop\ChatService\ViewModel\obj\Debug\ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\gold\Desktop\ChatService\ViewModel\obj\Debug\ViewModel.csproj.Up2Date
+C:\Users\gold\Desktop\ChatService\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\gold\Desktop\ChatService\ViewModel\obj\Debug\ViewModel.pdb

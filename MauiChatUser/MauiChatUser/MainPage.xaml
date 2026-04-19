@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiChatUser.MainPage"
+             BackgroundColor="#ECE5DD">
+    <Grid>
+        <VerticalStackLayout x:Name="gridLogin"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Spacing="15"
+                             Padding="30"
+                             WidthRequest="350">
+            <Label Text="Chat Application"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Entry x:Name="txtUsername"
+                   Placeholder="Enter Username"
+                   FontSize="16" />
+            <Label x:Name="lblError" 
+                   TextColor="Red"
+                   IsVisible="False" />
+            <Button Text="Enter"
+                    Clicked="OnLoginClicked"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontAttributes="Bold" />
+        </VerticalStackLayout>
+        <Grid x:Name="gridMainChat"
+              IsVisible="False"
+              RowDefinitions="Auto, *, Auto">
+            <Grid Grid.Row="0"
+                  ColumnDefinitions="Auto, *"
+                  Padding="10"
+                  BackgroundColor="White">
+                <Button x:Name="btnBack"
+                        Text="Back"
+                        Clicked="OnBackClicked"
+                        IsVisible="False"
+                        Grid.Column="0" />
+                <Label x:Name="lblChatTitle"
+                       Text="Select a user"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Grid.Column="1" />
+            </Grid>
+            <CollectionView x:Name="lstUsers"
+                            Grid.Row="1"
+                            SelectionMode="Single"
+                            SelectionChanged="OnUserSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="5"
+                                Padding="15"
+                                BackgroundColor="White">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                            <Label Text="{Binding Username}"
+                                   FontSize="18"
+                                   FontAttributes="Bold" />
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ScrollView x:Name="scrollChat"
+                        Grid.Row="1"
+                        IsVisible="False">
+                <VerticalStackLayout x:Name="stackMessages"
+                                     Padding="10"
+                                     Spacing="10" />
+            </ScrollView>
+            <Grid Grid.Row="2"
+                  ColumnDefinitions="*, Auto"
+                  Padding="10"
+                  x:Name="gridInput"
+                  IsVisible="False"
+                  BackgroundColor="White">
+                <Entry x:Name="txtMessage"
+                       Keyboard="Chat"
+                       FlowDirection="RightToLeft"
+                       Placeholder="Type a message..."
+                       Grid.Column="0" />
+                <Button Text="➤"
+                        Clicked="OnSendClicked"
+                        Grid.Column="1"
+                        Margin="5,0,0,0"
+                        BackgroundColor="#2196F3" />
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

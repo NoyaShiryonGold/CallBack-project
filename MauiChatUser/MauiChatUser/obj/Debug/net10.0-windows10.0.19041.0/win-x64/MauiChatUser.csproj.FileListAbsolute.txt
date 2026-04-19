@@ -1,0 +1,12 @@
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MauiChatUser.csproj.AssemblyReference.cache
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauiimage.inputs
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauifont.inputs
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauisplash.inputs
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauimanifest.stamp
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.i.cs
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.cs
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xaml
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
+C:\Users\gold\Documents\Noya\12\MauiChatUser\MauiChatUser\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MauiChatUser.GeneratedMSBuildEditorConfig.editorconfig
