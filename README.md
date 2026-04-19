@@ -1,56 +1,140 @@
-**Multi-Platform Hybrid Chat System (WCF & SignalR)**
-🚀 Overview
-This project is a high-performance, real-time communication system designed to bridge the gap between traditional desktop environments and modern mobile platforms. It demonstrates a sophisticated architectural solution for supporting Real-time Duplex communication across diverse ecosystems.
+**Hybrid Real-Time Chat System 📱💻**
+מערכת צ'אט היברידית המאפשרת תקשורת בזמן אמת בין לקוחות WPF (Desktop) ללקוחות .NET MAUI (Mobile). הפרויקט מדגים פתרון הנדסי לאתגר התקשורת הדו-כיוונית במובייל על ידי שילוב של טכנולוגיות WCF ו-SignalR.
 
-The system consists of a WPF Desktop Client, a .NET MAUI Mobile Client, and a centralized Hybrid Backend that manages state and message distribution.
+**🎯 האתגר הטכנולוגי
+**
+פרוטוקול WCF Duplex (תקשורת דו-כיוונית מלאה) עובד מצוין בסביבת דסקטופ, אך אינו נתמך באופן טבעי או יציב בפלטפורמות מובייל מודרניות כמו .NET MAUI. המערכת פותרת זאת על ידי שימוש ב-SignalR כ"גשר" (Bridge) לדחיפת הודעות ללקוחות המובייל.
 
-💡 The Challenge & Solution
-The Problem: Windows Communication Foundation (WCF) provides robust Duplex (two-way) communication for desktop applications. However, mobile platforms like .NET MAUI do not natively support WCF Callback contracts reliably, making real-time "push" notifications difficult to implement.
+🏗** ארכיטקטורת המערכת**
+Hybrid Real-Time Chat System 📱💻
 
-The Solution:
-I developed a Hybrid Bridge Architecture:
+מערכת צ'אט היברידית המאפשרת תקשורת בזמן אמת בין לקוחות WPF (Desktop) ללקוחות .NET MAUI (Mobile). הפרויקט מדגים פתרון הנדסי לאתגר התקשורת הדו-כיוונית במובייל על ידי שילוב של טכנולוגיות WCF ו-SignalR.
 
-WPF Clients communicate via WSDualHttpBinding for native duplex support.
+**🎯 האתגר הטכנולוגי**
 
-MAUI Clients utilize a combination of BasicHttpBinding (for sending requests) and SignalR (to receive real-time push updates).
+פרוטוקול WCF Duplex (תקשורת דו-כיוונית מלאה) עובד מצוין בסביבת דסקטופ, אך אינו נתמך באופן טבעי או יציב בפלטפורמות מובייל מודרניות כמו .NET MAUI. המערכת פותרת זאת על ידי שימוש ב-SignalR כ"גשר" (Bridge) לדחיפת הודעות ללקוחות המובייל.
 
-The server acts as a synchronizer, ensuring that a message sent from any platform is instantly broadcasted to all recipients, regardless of their connection protocol.
+🏗 **ארכיטקטורת המערכת**
 
-🛠 Tech Stack
-Backend: .NET Framework WCF Service, Self-Hosted OWIN SignalR Server.
+המערכת מורכבת משלושה רכיבים עיקריים:
 
-Desktop Client: WPF (Windows Presentation Foundation) using MVVM.
+1. שרת היברידי (WpfHost + WcfService)
 
-Mobile Client: .NET MAUI (Multi-platform App UI).
+השרת מארח בו-זמנית שני סוגי תקשורת:
 
-Networking: WCF Duplex, SignalR Hubs, RESTful-style WCF Endpoints.
+WCF Endpoint (wsDualHttpBinding): מיועד ללקוחות WPF, תומך ב-Callback Contract (IChatCallback) לקבלת הודעות בזמן אמת.
 
-Patterns: Singleton, Mediator, Factory Pattern, Async/Await.
+WCF Endpoint (basicHttpBinding): מיועד ללקוחות MAUI, מאפשר פעולות Stateless (שליחה, התחברות, משיכת היסטוריה).
 
-🏗 Architecture Highlights
-Dual-Endpoint Hosting: The service exposes multiple endpoints on the same base address to cater to different client requirements.
+SignalR Hub (ChatHub): משמש כערוץ ה-Callback עבור לקוחות המובייל.
 
-Thread Safety: Implements thread-locking mechanisms (_syncRoot) and concurrent collections to handle multiple simultaneous connections.
+2. לקוח דסקטופ (WPF)
 
-UI Synchronization: Uses MainThread.BeginInvokeOnMainThread in the mobile client to ensure background network events safely update the user interface.
+משתמש בחוזה IChatService ובמימוש IChatCallback כדי לקבל הודעות בדחיפה ישירות מהשרת.
 
-State Management: A centralized SharedData singleton manages local session persistence and chat history.
+3. לקוח מובייל (.NET MAUI)
 
-📂 Main Components
-WcfService: The core logic, managing user sessions and the message database.
+משתמש בשילוב טכנולוגי:
 
-WpfHost: The server entry point that initializes both the WCF ServiceHost and the SignalR pipeline.
+שליחה: דרך IMauiChatService (פרוטוקול WCF Basic).
 
-MauiChatUser: The cross-platform mobile app featuring a custom ServiceHelper to manage hybrid connectivity.
+קבלה: דרך HubConnection של SignalR המאזין לאירוע receiveMessage.
 
-🔧 Setup & Installation
-Clone the repository.
+ניהול מצב: מחלקת ServiceHelper מרכזת את שתי התקשורות תחת Singleton אחד.
 
-Run the WpfHost project first to initialize the server.
+🛠 טכנולוגיות בשימוש
 
-For mobile testing, update the _wcfAddress and _signalrAddress in ServiceHelper.cs to your local IP or a DevTunnel URL.
+Server Side: WCF, Self-Hosted SignalR (OWIN), .NET Framework 4.8.
 
-Launch the WPF or MAUI clients and start chatting!
+Client Side: .NET MAUI (Mobile), WPF (Desktop).
 
-👨‍💻 Author
-Developed as a final project in Computer Science, focusing on distributed systems and cross-platform communication.
+Data Access: שכבת ViewModel לניהול משתמשים והודעות ב-DB.
+
+Networking: Hybrid Bridge (WCF Dual/Basic + SignalR) בשילוב DevTunnels.
+
+🌐 קישוריות ומעקף localhost (DevTunnels)
+
+אחד האתגרים בפיתוח אפליקציות מובייל הוא ש-localhost במכשיר (או באמולטור) אינו מצביע על המחשב המארח. כדי לאפשר למכשיר ה-MAUI לתקשר עם שרת ה-WCF/SignalR המקומי, הפרויקט עושה שימוש ב-Visual Studio DevTunnels:
+
+מה זה עושה? יוצר כתובת URL ציבורית מאובטחת (HTTPS) המנתבת תעבורה ישירות לפורטים המקומיים במחשב הפיתוח.
+
+הגדרה: ב-Visual Studio, תחת תפריט ה-Debug, הופעלו "Dev Tunnels" עבור הפורטים 8733 (WCF) ו-8080 (SignalR).
+
+מימוש: בקובץ ServiceHelper.cs, כתובות ה-URL המקומיות הוחלפו בכתובות ה-Tunnel שנוצרו (לדוגמה: https://xxxx-8080.euw.devtunnels.ms).
+
+📂 רכיבי מפתח בקוד
+
+ChatService.cs: המימוש המרכזי של השירות. כאשר הודעה מתקבלת, היא מופצת גם ללקוחות ה-WCF (דרך ה-Callback) וגם ללקוחות ה-SignalR (דרך ה-HubContext).
+
+ServiceHelper.cs (MAUI): מנהל את החיבור הכפול. הוא מחזיק את כתובות ה-DevTunnel ומבצע את החיבור ל-SignalR ואת יצירת ערוץ ה-WCF.
+
+App.config: הגדרת ה-Endpoints המרובים באותה כתובת בסיס (Base Address).
+
+🚀 הוראות הרצה
+
+שרת: יש להריץ את פרויקט WpfHost. ודא שה-DevTunnels פעילים ב-Visual Studio. השרת יפתח את ה-WCF Host ואת שרת ה-SignalR.
+
+מובייל: ודא שכתובות ה-URL ב-ServiceHelper.cs מעודכנות לכתובות ה-Tunnel הנוכחיות שלך.
+
+שימוש: התחבר עם שם משתמש קיים, בחר איש קשר מהרשימה והתחל להתכתב.
+המערכת מורכבת משלושה רכיבים עיקריים:
+
+1. שרת היברידי (WpfHost + WcfService)
+
+השרת מארח בו-זמנית שני סוגי תקשורת:
+
+WCF Endpoint (wsDualHttpBinding): מיועד ללקוחות WPF, תומך ב-Callback Contract (IChatCallback) לקבלת הודעות בזמן אמת.
+
+WCF Endpoint (basicHttpBinding): מיועד ללקוחות MAUI, מאפשר פעולות Stateless (שליחה, התחברות, משיכת היסטוריה).
+
+SignalR Hub (ChatHub): משמש כערוץ ה-Callback עבור לקוחות המובייל.
+
+2. לקוח דסקטופ (WPF)
+
+משתמש בחוזה IChatService ובמימוש IChatCallback כדי לקבל הודעות בדחיפה ישירות מהשרת.
+
+3. לקוח מובייל (.NET MAUI)
+
+משתמש בשילוב טכנולוגי:
+
+שליחה: דרך IMauiChatService (פרוטוקול WCF Basic).
+
+קבלה: דרך HubConnection של SignalR המאזין לאירוע receiveMessage.
+
+ניהול מצב: מחלקת ServiceHelper מרכזת את שתי התקשורות תחת Singleton אחד.
+
+🛠 טכנולוגיות בשימוש
+
+Server Side: WCF, Self-Hosted SignalR (OWIN), .NET Framework 4.8.
+
+Client Side: .NET MAUI (Mobile), WPF (Desktop).
+
+Data Access: שכבת ViewModel לניהול משתמשים והודעות ב-DB.
+
+Networking: Hybrid Bridge (WCF Dual/Basic + SignalR) בשילוב DevTunnels.
+
+🌐 קישוריות ומעקף localhost (DevTunnels)
+
+אחד האתגרים בפיתוח אפליקציות מובייל הוא ש-localhost במכשיר (או באמולטור) אינו מצביע על המחשב המארח. כדי לאפשר למכשיר ה-MAUI לתקשר עם שרת ה-WCF/SignalR המקומי, הפרויקט עושה שימוש ב-Visual Studio DevTunnels:
+
+מה זה עושה? יוצר כתובת URL ציבורית מאובטחת (HTTPS) המנתבת תעבורה ישירות לפורטים המקומיים במחשב הפיתוח.
+
+הגדרה: ב-Visual Studio, תחת תפריט ה-Debug, הופעלו "Dev Tunnels" עבור הפורטים 8733 (WCF) ו-8080 (SignalR).
+
+מימוש: בקובץ ServiceHelper.cs, כתובות ה-URL המקומיות הוחלפו בכתובות ה-Tunnel שנוצרו (לדוגמה: https://xxxx-8080.euw.devtunnels.ms).
+
+📂 רכיבי מפתח בקוד
+
+ChatService.cs: המימוש המרכזי של השירות. כאשר הודעה מתקבלת, היא מופצת גם ללקוחות ה-WCF (דרך ה-Callback) וגם ללקוחות ה-SignalR (דרך ה-HubContext).
+
+ServiceHelper.cs (MAUI): מנהל את החיבור הכפול. הוא מחזיק את כתובות ה-DevTunnel ומבצע את החיבור ל-SignalR ואת יצירת ערוץ ה-WCF.
+
+App.config: הגדרת ה-Endpoints המרובים באותה כתובת בסיס (Base Address).
+
+🚀 הוראות הרצה
+
+שרת: יש להריץ את פרויקט WpfHost. ודא שה-DevTunnels פעילים ב-Visual Studio. השרת יפתח את ה-WCF Host ואת שרת ה-SignalR.
+
+מובייל: ודא שכתובות ה-URL ב-ServiceHelper.cs מעודכנות לכתובות ה-Tunnel הנוכחיות שלך.
+
+שימוש: התחבר עם שם משתמש קיים, בחר איש קשר מהרשימה והתחל להתכתב.
