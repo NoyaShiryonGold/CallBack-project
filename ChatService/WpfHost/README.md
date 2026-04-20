@@ -10,34 +10,34 @@
 
 שימוש בטרמינל מאפשר שליטה מדויקת ומהירה יותר בניהול ה-Tunnels.
 
-1. ### פתיחת הטרמינל
+### פתיחת הטרמינל
    בתוך Visual Studio: הקש Ctrl \+ \~ (מילדה) או עבור לתפריט View \-\> Terminal.
 
-2. ### התקנת ה-CLI (במידה ולא מותקן)
+### התקנת ה-CLI (במידה ולא מותקן)
 הדרך הקלה ביותר להתקין את כלי ה-devtunnel היא דרך ה-Terminal (ב-Windows):
 ```shell
 winget install Microsoft.devtunnel
 ```
 לאחר ההתקנה, יש לסגור ולפתוח מחדש את הטרמינל.
 
-3. ### התחברות (Login)
+### התחברות (Login)
 יש לבצע התחברות לחשבון ה-Microsoft שלך (זהה לזה של ה-Visual Studio):
 ```shell
 devtunnel login
 ```
-4. ### יצירת Tunnel חדש
+### יצירת Tunnel חדש
 ניצור Tunnel קבוע בשם chat-bridge המאפשר גישה אנונימית (כדי שהמובייל יוכל להתחבר ללא הזדהות):
 ```shell
 devtunnel create chat-bridge --allow-anonymous
 ```
-5. ### הוספת הפורטים (Ports)
+### הוספת הפורטים (Ports)
    כעת נגדיר ל-Tunnel אילו פורטים עליו לחשוף. הפרויקט שלנו משתמש ב-8733 עבור WCF וב-8080 עבור SignalR	:
 
 ```shell
 devtunnel port create chat-bridge -p 8733devtunnel port create chat-bridge -p 8080
 ```
 
-6. ### הרצת ה-Tunnel (Hosting)
+### הרצת ה-Tunnel (Hosting)
 כדי להתחיל את ניתוב התעבורה בפועל:
 ```shell
 devtunnel host chat-bridge
