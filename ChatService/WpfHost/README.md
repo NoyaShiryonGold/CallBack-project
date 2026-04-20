@@ -34,7 +34,8 @@ devtunnel create chat-bridge --allow-anonymous
    כעת נגדיר ל-Tunnel אילו פורטים עליו לחשוף. הפרויקט שלנו משתמש ב-8733 עבור WCF וב-8080 עבור SignalR	:
 
 ```shell
-devtunnel port create chat-bridge -p 8733devtunnel port create chat-bridge -p 8080
+devtunnel port create chat-bridge -p 8733
+devtunnel port create chat-bridge -p 8080
 ```
 
 ### הרצת ה-Tunnel (Hosting)
