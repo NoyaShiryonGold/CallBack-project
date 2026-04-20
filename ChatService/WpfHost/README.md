@@ -47,9 +47,9 @@ devtunnel host chat-bridge
 * https://xxxx-8080.euw.devtunnels.ms 
 
 ## **📝 עדכון קוד הלקוח (MAUI)**
-העתק את הכתובות מהטרמינל ועדכן את הקובץ ServiceHelper.cs:
+העתק את הכתובות מהטרמינל ועדכן את הקובץ ServiceHelper.cs (לדוגמה):
 ```c#
-// דוגמה לעדכון הכתובות ב-ServiceHelper.csprivate readonly string _signalrAddress= "[https://xxxx-8080.euw.devtunnels.ms/signalr](https://xxxx-8080.euw.devtunnels.ms/signalr)";
+private readonly string _signalrAddress= "[https://xxxx-8080.euw.devtunnels.ms/signalr](https://xxxx-8080.euw.devtunnels.ms/signalr)";
 private readonly string _wcfAddress= "[https://xxxx-8733.euw.devtunnels.ms/Design_Time_Addresses/WcfService/ChatService/maui](https://xxxx-8733.euw.devtunnels.ms/Design_Time_Addresses/WcfService/ChatService/maui)";
 
 ```
